@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <html lang="en-US">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survivor Chronicles</title>
+    <title>Apocalypse Survivor</title>
     <meta name="author" content="MazontheMoon">
-    <meta name="description" content="FreeCodeCamp Responsive Web Design Project 2 - a survey form">
+    <meta name="description" content="FreeCodeCamp Responsive Web Design Project 2 - So you survived the apocalypse survey form">
     <!--
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="cssFileName.css">
     -->
    </head>
    <body>
-     <header>
-       
-     </header>
-     <main>
-    
-     </main>
-     <footer>
-       
-     </footer>
+     <!--FreeCodeCamp Responsive Web Design project 2-->
+     <main class="container">
+  <!--form header includes rotating compass icon, title and description-->
+       <header>
+          <img class="compass_icon" cite"Darolu [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)]" title"Compass" alt="Image of a compass rotating back and forth" width="100px" height="100px" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Compass_icon_matte.svg">
+          <h1 id="title">So you survived the Apocalypse!</h1>
+          <p id="description">The world as we knew it is over and you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race on our world.</p>
+       </header> 
+       <!--START OF FORM-->
+       <form id="survey-form">
+         <!--contact details-->
+         <section class="contact">
+           <p id="required">*We really want to know this</p>
+           <div>
+             <label id="name-label" for="name">* Name:</label>
+             <input autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required>
+           </div>
+           <div>
+             <label id="email-label" for="email">* Email:</label>
+             <input type="email" name="email" id="email" placeholder="mail@lastserveronearth.net" required>
+           </div>
+         </section>
+         <section class="apoc_type">
+      
+         </section>
+       </form>
+       <!--END OF FORM-->
+      
+      </main>
    </body>
 </html>

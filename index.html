@@ -14,31 +14,96 @@
    <body>
      <!--FreeCodeCamp Responsive Web Design project 2-->
      <main class="container">
-  <!--form header includes rotating compass icon, title and description-->
-       <header>
-          <img class="compass_icon" cite"Darolu [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)]" title"Compass" alt="Image of a compass rotating back and forth" width="100px" height="100px" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Compass_icon_matte.svg">
-          <h1 id="title">So you survived the Apocalypse!</h1>
-          <p id="description">The world as we knew it is over and you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race on our world.</p>
-       </header> 
-       <!--START OF FORM-->
-       <form id="survey-form">
-         <!--contact details-->
-         <section class="contact">
-           <p id="required">*We really want to know this</p>
-           <div>
-             <label id="name-label" for="name">* Name:</label>
-             <input autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required>
-           </div>
-           <div>
-             <label id="email-label" for="email">* Email:</label>
-             <input type="email" name="email" id="email" placeholder="mail@lastserveronearth.net" required>
-           </div>
-         </section>
-         <section class="apoc_type">
-      
-         </section>
-       </form>
-       <!--END OF FORM-->
+       <!--form header includes rotating compass icon, title and description-->
+  <header>
+    <h1 id="title">So you survived the Apocalypse!</h1>
+    <p id="description">The world as we knew it is over and you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race on our world.</p>
+  </header> 
+  <!--START OF FORM-->
+  <form id="survey-form">
+    <!--contact details-->
+    <p id="required">*We really want to know this</p>
+    <div>
+      <label id="name-label" for="name">* Name:
+      <input autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required></label>
+    </div>
+    <div>
+      <label id="email-label" for="email">* Email:
+      <input type="email" name="email" id="email" placeholder="mail@lastserveronearth.net" required></label>
+    </div>
+    <!--Type of Apocalypse  section-->
+    <div>
+      <label for"type_drop">Type of Apocalypse?</label>
+      <select id="dropdown" name="type_drop">
+        <option disabled selected value>How did your world end?</option> 
+        <option value="drop_meteor">Natural Disaster</option>
+        <option value="drop_zombie">Rise of the Living Dead</option>
+        <option value="drop_plant">Attack of the Triffids</option>
+        <option value="drop_mutant">Umbrella Corporation incident		</option>
+        <option value="drop_terminator">Skynet</option>
+        <option value="drop_dino">Dinosaurs</option>
+        <option value="drop_robo">Robots</option>
+        <option value="drop_robodino">Robotic Dinosaurs</option>
+      </select>
+    </div>
+    <!--Group info section-->
+    <div>
+      <!--use fieldset for accessibility but will remove all default styling-->
+      <fieldset>
+        <legend>How Many</legend>
+        <label><input type="radio" name="rad_time" value="rad_time_day">Days</label>
+        <label><input type="radio" name="rad_time" value="rad_time_week">Weeks</label>
+        <label><input type="radio" name="rad_time" value="rad_time_month">Months</label>
+        <label><input type="radio" name="rad_time" value="rad_time_day">Years</label>        
+      </fieldset>
+      <div id="time_num">
+        <label id="number-label" for="number"> did you survive outside the Safe Zone? <input type="number" min="1" max="12" name="number" id="number" placeholder="The 12 year Apocalypse"></label>
+      </div>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Were you in a </legend>
+        <label><input type="radio" name="rad_group" value="rad_group_none">exclusive group (1)</label>
+        <label><input type="radio" name="rad_group" value="rad_group_sml">small group (2-6)</label>
+        <label><input type="radio" name="rad_group" value="rad_group_med">medium group (6-14)</label>
+        <label><input type="radio" name="rad_group" value="rad_group_lrg">large group (15+)</label>
+      </fieldset>
+    </div>
+    <!--survival choices section - checkboxes used to choose between two items. Example: value name returned to form server is chk_covet_tp_sock. chk_covet denotes it is a checkbox element in the "covet" section. tp is the value the form uses if the box is checked, if no value is returned to the form server when box not checked sock is the value used inform server. In other words for the first entry between Toilet Paper and Socks if the check box is checked teh value sed in teh background is tp and if not checked the value used is sock-->
+    <div>
+      <fieldset>
+        <legend>Which are most coveted?</legend>
+        <ul>
+          <li>
+            <label><span class="chk_covet_l_true">Toilet Paper</span><input type="checkbox" name="chk_covet" value="chk_covet_tp_socks" checked><span class="chk_covet_r_false">Spare Socks</span></label>
+          </li>
+          <li>
+            <label><span class="chk_covet_l_true">Mattress</span><input type="checkbox" name="chk_covet" value="chk_covet_matt_deo"><span class="chk_covet_r_false">Deodorant</span></label>
+          </li>
+          <li>
+            <label><span class="chk_covet_l_true">Toothpaste</span><input type="checkbox" name="chk_covet" value="chk_covet_tooth_con"><span class="chk_covet_r_false">Condoms</span></label>
+          </li>
+          <li>
+            <label><span class="chk_covet_l_true">Alcohol</span><input type="checkbox" name="chk_covet" value="chk_covet_booze_choc"><span class="chk_covet_r_false">Chocolate</span></label>
+          </li>
+          <li>
+            <label><span class="chk_covet_l_true">Lighter</span><input type="checkbox" name="chk_covet" value="chk_covet_lghtr_trch"><span class="chk_covet_r_false">Torch</span></label>
+          </li>
+          <li>
+            <label><span class="chk_covet_l_true">Knife</span><input type="checkbox" name="chk_covet" value="chk_covet_knfe_tape"><span class="chk_covet_r_false">Duct tape</span></label>
+          </li>
+          <li>
+            <label><span class="chk_covet_l_true">Firearm</span><input type="checkbox" name="chk_covet" value="chk_covet_gun_car"><span class="chk_covet_r_false">Vehicle</span></label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+    <!--message in a time bottle section with text box-->
+    <div>
+      <label for="comments">If you could send a message back in time what survival tip would you give your pre-apocalypse self?<textarea wrap="soft"></textarea></label>
+    </div>
+  </form>
+  <!--END OF FORM-->
       
       </main>
    </body>

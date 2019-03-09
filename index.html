@@ -14,7 +14,7 @@
    <body>
      <!--FreeCodeCamp Responsive Web Design project 2-->
      <main class="container">
-       <!--form header includes rotating compass icon, title and description-->
+         <!--form header includes title and description-->
   <header>
     <h1 id="title">So you survived the Apocalypse!</h1>
     <p id="description">The world as we knew it is over and you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race on our world.</p>
@@ -33,7 +33,7 @@
     </div>
     <!--Type of Apocalypse  section-->
     <div>
-      <label for"type_drop">Type of Apocalypse?</label>
+      <label for="type_drop">Type of Apocalypse?</label>
       <select id="dropdown" name="type_drop">
         <option disabled selected value>How did your world end?</option> 
         <option value="drop_meteor">Natural Disaster</option>
@@ -69,7 +69,7 @@
         <label><input type="radio" name="rad_group" value="rad_group_lrg">large group (15+)</label>
       </fieldset>
     </div>
-    <!--survival choices section - checkboxes used to choose between two items. Example: value name returned to form server is chk_covet_tp_sock. chk_covet denotes it is a checkbox element in the "covet" section. tp is the value the form uses if the box is checked, if no value is returned to the form server when box not checked sock is the value used inform server. In other words for the first entry between Toilet Paper and Socks if the check box is checked teh value sed in teh background is tp and if not checked the value used is sock-->
+    <!--survival choices section - checkboxes used to choose between two items. Example: value name returned to form server is chk_covet_tp_sock. chk_covet denotes it is a checkbox element in the "covet" section. tp is the value the form uses if the box is checked, if no value is returned to the form server when box not checked sock is the value used inform server. In other words for the first entry between Toilet Paper and Socks if the check box is checked the value sent in the background is tp and if not checked the value used is sock-->
     <div>
       <fieldset>
         <legend>Which are most coveted?</legend>
@@ -102,9 +102,20 @@
     <div>
       <label for="comments">If you could send a message back in time what survival tip would you give your pre-apocalypse self?<textarea wrap="soft"></textarea></label>
     </div>
+    <!--submit button-->
+    <div>
+      <button type="submit" id="submit">Press me</button>
+    </div>
+    <!--reset button-->
+    <div>
+      <button type="reset" id="reset"><span class="crossout">Press Me</span></button>
+    </div>
   </form>
   <!--END OF FORM-->
-      
-      </main>
+  <footer>
+    <p>A FCC Responsive WEeb Design Project by Mary Ronan</p>
+  </footer>
+       
+     </main>
    </body>
 </html>

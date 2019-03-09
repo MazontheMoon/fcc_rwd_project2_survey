@@ -14,18 +14,20 @@
    <body>
      <!--FreeCodeCamp Responsive Web Design project 2-->
      <main class="container">
-         <!--form header includes title and description-->
+  <!--form header includes title and description-->
   <header>
     <h1 id="title">So you survived the Apocalypse!</h1>
-    <p id="description">The world as we knew it is over and you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race on our world.</p>
   </header> 
   <!--START OF FORM-->
   <form id="survey-form">
     <!--contact details-->
-    <p id="required">*We really want to know this</p>
     <div>
-      <label id="name-label" for="name">* Name:
-      <input autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required></label>
+      <p id="description">The world as we knew it is over and you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race on our world.</p>
+    <p id="required">*We really want to know this</p>
+    </div>
+    <div>
+      <label id="name-label" for="name">* Name: </label>
+      <input autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required>
     </div>
     <div>
       <label id="email-label" for="email">* Email:
@@ -51,10 +53,20 @@
       <!--use fieldset for accessibility but will remove all default styling-->
       <fieldset>
         <legend>How Many</legend>
-        <label><input type="radio" name="rad_time" value="rad_time_day">Days</label>
-        <label><input type="radio" name="rad_time" value="rad_time_week">Weeks</label>
-        <label><input type="radio" name="rad_time" value="rad_time_month">Months</label>
-        <label><input type="radio" name="rad_time" value="rad_time_day">Years</label>        
+        <ul class="list_time">
+          <li>
+            <label><input type="radio" name="rad_time" value="rad_time_day">Days</label>
+          </li>
+          <li>
+            <label><input type="radio" name="rad_time" value="rad_time_week">Weeks</label>
+          </li>
+          <li>
+            <label><input type="radio" name="rad_time" value="rad_time_month">Months</label>
+          </li>
+          <li>
+            <label><input type="radio" name="rad_time" value="rad_time_day">Years</label>
+          </li>
+        </ul>  
       </fieldset>
       <div id="time_num">
         <label id="number-label" for="number"> did you survive outside the Safe Zone? <input type="number" min="1" max="12" name="number" id="number" placeholder="The 12 year Apocalypse"></label>
@@ -63,17 +75,27 @@
     <div>
       <fieldset>
         <legend>Were you in a </legend>
-        <label><input type="radio" name="rad_group" value="rad_group_none">exclusive group (1)</label>
-        <label><input type="radio" name="rad_group" value="rad_group_sml">small group (2-6)</label>
-        <label><input type="radio" name="rad_group" value="rad_group_med">medium group (6-14)</label>
-        <label><input type="radio" name="rad_group" value="rad_group_lrg">large group (15+)</label>
+        <ul class="list_group">
+          <li>
+            <label><input type="radio" name="rad_group" value="rad_group_none">exclusive group (1)</label>
+          </li>
+          <li>
+            <label><input type="radio" name="rad_group" value="rad_group_sml">small group (2-6)</label>
+          </li>
+          <li>
+            <label><input type="radio" name="rad_group" value="rad_group_med">medium group (6-14)</label>
+          </li>
+          <li>
+            <label><input type="radio" name="rad_group" value="rad_group_lrg">large group (15+)</label>
+          </li>
+        </ul>
       </fieldset>
     </div>
-    <!--survival choices section - checkboxes used to choose between two items. Example: value name returned to form server is chk_covet_tp_sock. chk_covet denotes it is a checkbox element in the "covet" section. tp is the value the form uses if the box is checked, if no value is returned to the form server when box not checked sock is the value used inform server. In other words for the first entry between Toilet Paper and Socks if the check box is checked the value sent in the background is tp and if not checked the value used is sock-->
+    <!--survival choices section - checkboxes used to choose between two items. If checked and value returned to form brain the first part of the value name is used and if not checked and no value returned to form brain the last part of the value name is used. Example: value name returned to form server is chk_covet_tp_sock. The first entry between Toilet Paper and Socks if the check box is checked the value used by brain is tp and if not checked the value used is sock-->
     <div>
       <fieldset>
         <legend>Which are most coveted?</legend>
-        <ul>
+        <ul class="list_switch_buttons">
           <li>
             <label><span class="chk_covet_l_true">Toilet Paper</span><input type="checkbox" name="chk_covet" value="chk_covet_tp_socks" checked><span class="chk_covet_r_false">Spare Socks</span></label>
           </li>
@@ -113,9 +135,8 @@
   </form>
   <!--END OF FORM-->
   <footer>
-    <p>A FCC Responsive WEeb Design Project by Mary Ronan</p>
+    <p>This FreeCodeCamp <span class="fab fa-free-code-camp"></span> project designed by Mary Ronan is brought to you by <span class="fab fa-html5"></span> and <span class="fab fa-css3"></span></p>
   </footer>
-       
-     </main>
+</main>
    </body>
 </html>

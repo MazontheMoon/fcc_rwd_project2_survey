@@ -18,7 +18,7 @@
    <body>
      <!--FreeCodeCamp Responsive Web Design project 2-->
      <main class="container">
-         <!--form header includes title and description-->
+        <!--form header includes title and description-->
   <header>
     <h1 id="title">So you survived the Apocalypse!</h1>
   </header> 
@@ -30,19 +30,19 @@
       <p id="description">The world as we knew it is over and after 12 years you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race through the next Apocalypse.</p>
     <p id="required">*We really want to know this</p>
     </div>
-    <div class="form_left">
-      <label id="name-label" for="name">Name: </label>
+    <div class="form_left question">
+      <label id="name-label" for="name">*Name: </label>
     </div>
     <div class="form_right">
       <input class="fw" autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required>
     </div>
-    <div class="form_left">
-      <label id="email-label" for="email">Email:</label>
+    <div class="form_left question">
+      <label id="email-label" for="email">*Email:</label>
     </div>
     <div class="form_right">
       <input class="fw" type="email" name="email" id="email" placeholder="mail@lastserveronearth.net" required></div>
     <!--Type of Apocalypse  section-->
-    <div class="form_left">
+    <div class="form_left question">
        <label for="type_drop">Type of Apocalypse?</label>
     </div>
     <div class="form_right">
@@ -55,14 +55,14 @@
         <option value="drop_terminator">Skynet</option>
         <option value="drop_dino">Dinosaurs</option>
         <option value="drop_robo">Robots</option>
-        <option value="drop_robodino">Robotic Dinosaurs</option>
+        <option value="drop_robodino">Robot Dinosaurs</option>
       </select>
     </div>
     <!--Group info section-->
     <div>
       <!--use fieldset for accessibility but will remove all default styling-->
       <fieldset class="fw">
-        <legend class="form_left">Roughly how many</legend>
+        <legend class="form_left question">Roughly how many</legend>
         <div>
           <ul class="list_time form_right">
           <li>
@@ -80,7 +80,7 @@
         </ul>
         </div>
       </fieldset>
-      <div id="time_num" class="form_right">
+      <div id="time_num" class="form_right question">
         <label id="number-label" for="number"> did you survive outside the Safe Zone?</label>
       </div>
       <div class="form_right">
@@ -89,7 +89,7 @@
     </div>
     <div>
       <fieldset class="fw">
-        <legend class="form_left">Were you in a </legend>
+        <legend class="form_left question">Were you in a </legend>
         <ul class="list_group form_right">
           <li>
             <label><input type="radio" name="rad_group" value="rad_group_none">exclusive group (1)</label>
@@ -109,7 +109,7 @@
     <!--survival choices section - checkboxes used to choose between two items. If checked and value returned to form brain the first part of the value name is used and if not checked and no value returned to form brain the last part of the value name is used. Example: value name returned to form server is chk_covet_tp_sock. The first entry between Toilet Paper and Socks if the check box is checked the value used by brain is tp and if not checked the value used is sock-->
     <div>
       <fieldset class="fw">
-        <legend class="form_left">Which were most coveted?</legend>
+        <legend class="form_left question">Which were most coveted?</legend>
         <ul class="list_switch_buttons form_right">
           <li>
             <label><span class="chk_covet_l_true">Toilet Paper</span><input type="checkbox" name="chk_covet" value="chk_covet_tp_socks" checked><span class="chk_covet_r_false">Spare Socks</span></label>
@@ -136,11 +136,11 @@
       </fieldset>
     </div>
     <!--message in a time bottle section with text box-->
-    <div class="form_left">
+    <div class="form_left question">
       <label for="comments">If you could send a message back in time what survival tip would you give your pre-apocalypse self?</label>
     </div>
     <div class="form_right">
-      <textarea class="fw" rows="6" wrap="soft"></textarea>
+      <textarea class="fw" rows="8" wrap="soft"></textarea>
     </div>
     <!--submit button-->
     <div class="fw">
@@ -157,7 +157,7 @@
   <!--END OF FORM-->
   <footer>
     <p class="fw">This FreeCodeCamp <span class="fab fa-free-code-camp"></span> project designed by Mary Ronan is brought to you by <span class="fab fa-html5"></span> and <span class="fab fa-css3"></span></p>
-  </footer>
+  </footer> 
      </main>
    </body>
 </html>

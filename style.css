@@ -3,8 +3,8 @@ Declare variables for page
 =========================*/
 :root{
   --fccGreen: #006400;
-  --pageBG: #949398;
-  --containerBG: white;
+  --pageBG: #D32F2F;
+  --containerBG: #949398;
 }
 
 
@@ -27,7 +27,7 @@ body {
     -moz-box-sizing: border-box;
 }
 
-/*remove default figureset  and list styling*/
+/*remove default fieldset  and list styling*/
 fieldset {
   border: none;
   padding: 0;
@@ -53,15 +53,18 @@ li {
 /*Layout - center the main centainer on screen*/
 body {
   background-color: var(--pageBG);
+  background: radial-gradient(white, red, black);
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
 main {
+  margin: 20px 0;
   width: 75%;
   max-width: 1000px;
   background-color: var(--containerBG);
+  border-radius: 20px;
 }
 
 section {
@@ -72,6 +75,16 @@ section {
 
 section div {
   padding: 2px 0;
+  margin: 5px 0;
+}
+
+input, textarea, select{
+  border-radius: 20px;
+  text-align: center;
+}
+
+input:hover, textarea:hover, select:hover, input:active, textarea:active, select:active {
+  box-shadow: 1px 1px 1px red;
 }
 /*align the answer sections of the form to the right-hand side*/
 .form_right {
@@ -98,11 +111,13 @@ section div {
 footer p {
   padding-top: 15px;
 }
+
 /*Font styling*/
 h1 {
   font-family: 'Rock Salt', Verdana, sans-serif;
   font-size: 2rem;
   text-align: center;
+  text-shadow: 2px 2px 2px black;
 }
 
 p, label, input, select, option, legend, li , button{
@@ -111,9 +126,12 @@ p, label, input, select, option, legend, li , button{
 }
 
 label {
-  line-height: 2rem;
+  line-height: 2.4rem;
 }
 
+.question {
+  font-weight: bold;
+}
 #number {
   width: 50%;
   text-align: center;
@@ -123,6 +141,7 @@ footer p {
   font-size: 0.8rem;
   text-align: center;
   color: var(--fccGreen);
+  text-shadow: 1px 1px 1px white;
 }
 
 #required {
@@ -131,7 +150,10 @@ footer p {
   padding-right: 20px;
 }
 
-/*add asterisk symbol * on required field labels*/
+/*checkbox styling to look like slider switches*/
+.list_switch_buttons {
+  text-align: center;
+}
 
 /*============
 MEDIA QUERIES
@@ -140,6 +162,9 @@ MEDIA QUERIES
    
    /*larger font size*/
    
+   #description {
+     text-align: justify;
+   }
    /*reposition each Q+A in firm on single line */
    .form_right, .form_left {
      width: 95%;

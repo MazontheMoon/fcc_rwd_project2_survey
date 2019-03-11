@@ -138,10 +138,10 @@ label {
   font-weight: bold;
 }
 footer p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: center;
-  color: var(--fccGreen);
-  text-shadow: 1px 1px 1px white;
+  color: white;
+  text-shadow: 1px 1px 1px var(--fccGreen);;
 }
 
 #required {

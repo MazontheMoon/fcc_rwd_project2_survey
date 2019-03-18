@@ -7,8 +7,6 @@ Declare variables for page
   --containerBG: #949398;
 }
 
-
-
 /*=====================
 Basic Styles and Layout
 ======================*/
@@ -86,6 +84,7 @@ input, textarea, select{
 input:hover, textarea:hover, select:hover, input:active, textarea:active, select:active {
   box-shadow: 1px 1px 1px red;
 }
+
 /*align the answer sections of the form to the right-hand side*/
 .form_right {
   width: 45%;
@@ -165,7 +164,7 @@ MEDIA QUERIES
    #description {
      text-align: justify;
    }
-   /*reposition each Q+A in firm on single line */
+   /*reposition each Q+A in form on single line */
    .form_right, .form_left {
      width: 95%;
      clear: both;

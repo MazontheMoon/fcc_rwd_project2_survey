@@ -4,7 +4,7 @@ Declare variables for page
 :root{
   --fccGreen: #006400;
   --pageBG: #D32F2F;
-  --containerBG: #949398;
+  --containerBG: #546E7A;
 }
 
 /*=====================
@@ -48,10 +48,10 @@ li {
   margin: 2px 0;
 }
 
-/*Layout - center the main centainer on screen*/
+/*Layout - center the main container on screen*/
 body {
   background-color: var(--pageBG);
-  background: radial-gradient(white, red, black);
+  background: radial-gradient(white, orange, red, orange, black);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -63,6 +63,7 @@ main {
   max-width: 1000px;
   background-color: var(--containerBG);
   border-radius: 20px;
+  box-shadow: 2px 2px 2px black;
 }
 
 section {
@@ -83,6 +84,11 @@ input, textarea, select{
 
 input:hover, textarea:hover, select:hover, input:active, textarea:active, select:active {
   box-shadow: 1px 1px 1px red;
+  cursor: pointer;
+}
+
+li label {
+  cursor: pointer;
 }
 
 /*align the answer sections of the form to the right-hand side*/
@@ -124,6 +130,14 @@ p, label, input, select, option, legend, li , button{
   font-size: 1.2rem;
 }
 
+p {
+  line-height: 2rem;
+}
+.crossthrough {
+  text-decoration: line-through;
+  font-size: 1.6rem;
+}
+
 label {
   line-height: 2.4rem;
 }
@@ -131,6 +145,7 @@ label {
 .question {
   font-weight: bold;
 }
+
 #number {
   width: 50%;
   text-align: center;
@@ -153,6 +168,23 @@ footer p {
 .list_switch_buttons {
   text-align: center;
 }
+
+/*3D button styling*/
+.buttonsbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
 
 /*============
 MEDIA QUERIES

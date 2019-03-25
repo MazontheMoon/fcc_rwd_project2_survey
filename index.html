@@ -10,9 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="cssFileName.css">
     -->
-    <style>
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Rock+Salt');
-</style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Rock+Salt" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">  
    </head>
    <body>
@@ -106,7 +104,7 @@
         </ul>
       </fieldset>
     </div>
-    <!--survival choices section - checkboxes used to choose between two items. If checked and value returned to form brain the first part of the value name is used and if not checked and no value returned to form brain the last part of the value name is used. Example: value name returned to form server is chk_covet_tp_sock. The first entry between Toilet Paper and Socks if the check box is checked the value used by brain is tp and if not checked the value used is sock. Not very accessible for screen readers using two labels for each checkbox for for this sample form it won't be the end of the world-->
+    <!--survival choices section - checkboxes used to choose between two items. If checked and value returned to form brain the first part of the value name is used and if not checked and no value returned to form brain the last part of the value name is used. Example: value name returned to form server is chk_covet_tp_sock. The first entry between Toilet Paper and Socks if the check box is checked the value used by brain is tp and if not checked the value used is sock. Not very accessible for screen readers using two labels for each checkbox but for this sample form it won't be the end of the world-->
     <div>
       <fieldset class="fw">
         <legend class="form_left question">Which were most coveted?</legend>
@@ -152,6 +150,7 @@
         <button type="submit" id="submit">Press me</button>
       </div>
     </div>
+    <input type="hidden" id="timestamp" name="timestamp" value="2019">
     </form>
   </section>
   <!--END OF FORM-->

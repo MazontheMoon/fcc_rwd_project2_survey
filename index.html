@@ -15,146 +15,153 @@
    </head>
    <body>
      <!--FreeCodeCamp Responsive Web Design project 2-->
-     <main class="container">
-  <header>
+    <main class="container">
+  <header class="formTop">
     <h1 id="title">So you survived the Apocalypse!</h1>
-  </header> 
+    <p id="description">The world as we knew it is over and after <span class="crossthrough">10</span> 11 years you are one of the lucky few survivors still standing. The skills you have learned in order make it this far will help ensure the continuation of the human race
+      through the next <span class="crossthrough">Apocalypse</span> APOCALYPSES.</p>
+  </header>
   <!--START OF FORM-->
-  <section>
-    <form id="survey-form">
+  <form id="survey-form" class="form">
     <!--contact details-->
-    <div>
-      <p id="description">The world as we knew it is over and after <span class="crossthrough">10</span> 11 years you are one of the lucky few survivors still standing. The skills you have learned in order to survive will be invaluable to our effort to ensure the continuation of the human race through the next <span class="crossthrough">Apocalypse</span> APOCALYPSES.</p>
-    <p id="required">*We really want to know this</p>
+    <div class="formBox">
+      <div class="question">
+        <label id="name-label" for="name"><abbr title="We really want to know">*</abbr>Name: </label>
+      </div>
+      <div class="answer">
+        <input autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required </div>
+      </div>
     </div>
-    <div class="form_left question">
-      <label id="name-label" for="name">*Name: </label>
-    </div>
-    <div class="form_right">
-      <input class="fw" autofocus type="text" name="name" id="name" placeholder="Post or Pre Apocalypse" required>
-    </div>
-    <div class="form_left question">
-      <label id="email-label" for="email">*Email:</label>
-    </div>
-    <div class="form_right">
-      <input class="fw" type="email" name="email" id="email" placeholder="mail@lastserveronearth.net" required></div>
-    <!--Type of Apocalypse  section-->
-    <div class="form_left question">
-       <label for="type_drop">Type of Apocalypse?</label>
-    </div>
-    <div class="form_right">
-      <select class="fw" id="dropdown" name="type_drop">
-        <option disabled selected value>How did your world end?</option> 
-        <option value="drop_meteor">Natural Disaster</option>
-        <option value="drop_zombie">Rise of the Living Dead</option>
-        <option value="drop_plant">Attack of the Triffids</option>
-        <option value="drop_mutant">Umbrella Corporation incident		</option>
-        <option value="drop_terminator">Skynet</option>
-        <option value="drop_dino">Dinosaurs</option>
-        <option value="drop_robo">Robots</option>
-        <option value="drop_robodino">Robot Dinosaurs</option>
-      </select>
-    </div>
-    <!--Group info section-->
-    <div>
-      <!--use fieldset for accessibility but will remove all default styling-->
-      <fieldset class="fw">
-        <legend class="form_left question">Roughly how many</legend>
-        <div>
-          <ul class="list_time form_right">
-          <li>
-            <label><input type="radio" name="rad_time" value="rad_time_day">Days</label>
-          </li>
-          <li>
-            <label><input type="radio" name="rad_time" value="rad_time_week">Weeks</label>
-          </li>
-          <li>
-            <label><input type="radio" name="rad_time" value="rad_time_month">Months</label>
-          </li>
-          <li>
-            <label><input type="radio" name="rad_time" value="rad_time_day">Years</label>
-          </li>
-        </ul>
+      <div class="formBox">
+        <div class="question">
+          <label id="email-label" for="email"><abbr title="We really want to know">*</abbr>Email:</label>
         </div>
-      </fieldset>
-      <div id="time_num" class="form_right question">
-        <label id="number-label" for="number"> did you survive outside the Safe Zone?</label>
+        <div class="answer">
+          <input type="email" name="email" id="email" placeholder="mail@lastserveronearth.net" required>
+        </div>
       </div>
-      <div class="form_right">
-        <input  class="fw" type="number" min="1" max="12" name="number" id="number" placeholder="5">
+      <!--Type of Apocalypse  section-->
+      <div class="formBox">
+        <div class="question">
+          <label for="type_drop">Type of Apocalypse?</label>
+        </div>
+        <div class="answer">
+          <select id="dropdown" name="type_drop">
+              <option disabled selected value>How did your world end?</option> 
+              <option value="drop_meteor">Natural Disaster</option>
+              <option value="drop_zombie">Rise of the Living Dead</option>
+              <option value="drop_plant">Attack of the Triffids</option>
+              <option value="drop_mutant">Umbrella Corporation incident		</option>
+              <option value="drop_terminator">Skynet</option>
+              <option value="drop_dino">Dinosaurs</option>
+              <option value="drop_robo">Robots</option>
+              <option value="drop_robodino">Robot Dinosaurs</option>
+            </select>
+        </div>
       </div>
-    </div>
-    <div>
-      <fieldset class="fw">
-        <legend class="form_left question">Your survivor family? </legend>
-        <ul class="list_group form_right">
-          <li>
-            <label><input type="radio" name="rad_group" value="rad_group_none">exclusive group (1)</label>
-          </li>
-          <li>
-            <label><input type="radio" name="rad_group" value="rad_group_sml">small group (2-6)</label>
-          </li>
-          <li>
-            <label><input type="radio" name="rad_group" value="rad_group_med">medium group (6-14)</label>
-          </li>
-          <li>
-            <label><input type="radio" name="rad_group" value="rad_group_lrg">large group (15+)</label>
-          </li>
-        </ul>
-      </fieldset>
-    </div>
-    <!--survival choices section - checkboxes used to choose between two items. If checked and value returned to form brain the first part of the value name is used and if not checked and no value returned to form brain the last part of the value name is used. Example: value name returned to form server is chk_covet_tp_sock. The first entry between Toilet Paper and Socks if the check box is checked the value used by brain is tp and if not checked the value used is sock. Not very accessible for screen readers using two labels for each checkbox but for this sample form it won't be the end of the world-->
-    <div>
-      <fieldset class="fw">
-        <legend class="form_left question">Which were most coveted?</legend>
-        <ul class="list_switch_buttons form_right">
-          <li>
-            <label><span class="chk_covet_l_true switchLeft">Toilet Paper</span><input type="checkbox" name="chk_covet" value="chk_covet_tp_socks" checked><span class="chk_covet_r_false switchRight">Spare Socks</span></label>
-          </li>
-          <li>
-            <label><span class="chk_covet_l_true">Mattress</span><input type="checkbox" name="chk_covet" value="chk_covet_matt_deo"><span class="chk_covet_r_false">Deodorant</span></label>
-          </li>
-          <li>
-            <label><span class="chk_covet_l_true">Toothpaste</span><input type="checkbox" name="chk_covet" value="chk_covet_tooth_con"><span class="chk_covet_r_false">Condoms</span></label>
-          </li>
-          <li>
-            <label><span class="chk_covet_l_true">Alcohol</span><input type="checkbox" name="chk_covet" value="chk_covet_booze_choc"><span class="chk_covet_r_false">Chocolate</span></label>
-          </li>
-          <li>
-            <label><span class="chk_covet_l_true">Lighter</span><input type="checkbox" name="chk_covet" value="chk_covet_lghtr_trch"><span class="chk_covet_r_false">Torch</span></label>
-          </li>
-          <li>
-            <label><span class="chk_covet_l_true">Knife</span><input type="checkbox" name="chk_covet" value="chk_covet_knfe_tape"><span class="chk_covet_r_false">Duct tape</span></label>
-          </li>
-          <li>
-            <label><span class="chk_covet_l_true">Firearm</span><input type="checkbox" name="chk_covet" value="chk_covet_gun_car"><span class="chk_covet_r_false">Vehicle</span></label>
-          </li>
-        </ul>
-      </fieldset>
-    </div>
-    <!--message in a time bottle section with text box-->
-    <div class="form_left question">
-      <label for="comments">If you could send a message back in time what survival tip would you give your pre-apocalypse self?</label>
-    </div>
-    <div class="form_right">
-      <textarea class="fw" rows="8" wrap="soft"></textarea>
-    </div>
-    <div class="fw buttonsbox">
-      <!--reset button-->
-      <div class="resetButton">
-        <button type="reset" id="reset"><span class="crossthrough">Press Me</span></button>
+      <!--survival time section-->
+      <div class="formBox">
+        <div class="formBoxInTime">
+          <fieldset>
+            <legend class="timeFlex">Roughly how many</legend>
+            <div>
+              <ul class="timeFlex">
+                <li>
+                  <label><input type="radio" name="rad_time" value="rad_time_day">Days</label>
+                </li>
+                <li>
+                  <label><input type="radio" name="rad_time" value="rad_time_week">Weeks</label>
+                </li>
+                <li>
+                  <label><input type="radio" name="rad_time" value="rad_time_month">Months</label>
+                </li>
+                <li>
+                  <label><input type="radio" name="rad_time" value="rad_time_day">Years</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <div class="timeFlex" id="time_num">
+            <label id="number-label" for="number"> did you survive outside the Safe Zone?</label>
+          </div>
+          <div class="timeFlex">
+            <input class="fw" type="number" min="1" max="12" name="number" id="number" placeholder="5">
+          </div>
+        </div>
       </div>
-      <!--submit button-->
-      <div class="submitButton">
-        <button type="submit" id="submit">Press me</button>
+      <!--Group info section-->
+      <div class="formBox">
+        <fieldset>
+          <legend class="form_left question">Your survivor family? </legend>
+          <ul class="list_group form_right">
+            <li>
+              <label><input type="radio" name="rad_group" value="rad_group_none">exclusive group (1)</label>
+            </li>
+            <li>
+              <label><input type="radio" name="rad_group" value="rad_group_sml">small group (2-6)</label>
+            </li>
+            <li>
+              <label><input type="radio" name="rad_group" value="rad_group_med">medium group (6-14)</label>
+            </li>
+            <li>
+              <label><input type="radio" name="rad_group" value="rad_group_lrg">large group (15+)</label>
+            </li>
+          </ul>
+        </fieldset>
       </div>
-    </div>
-    <input type="hidden" id="timestamp" name="timestamp" value="2019">  
-    </form>
-  </section>
+      <!--survival choices section - checkboxes used to choose between two items. If checked and value returned to form brain the first part of the value name is used and if not checked and no value returned to form brain the last part of the value name is used. Example: value name returned to form server is chk_covet_tp_sock. The first entry between Toilet Paper and Socks if the check box is checked the value used by brain is tp and if not checked the value used is sock. Not very accessible for screen readers using two labels for each checkbox but for this sample form it won't be the end of the world-->
+      <div class="formBox">
+        <fieldset>
+          <legend class="question">Which were most coveted?</legend>
+          <ul class="list_switch_buttons answer">
+            <li>
+              <label><span class="chk_covet_l_true switchLeft">Toilet Paper</span><input type="checkbox" name="chk_covet" value="chk_covet_tp_socks" checked><span class="chk_covet_r_false switchRight">Spare Socks</span></label>
+            </li>
+            <li>
+              <label><span class="chk_covet_l_true">Mattress</span><input type="checkbox" name="chk_covet" value="chk_covet_matt_deo"><span class="chk_covet_r_false">Deodorant</span></label>
+            </li>
+            <li>
+              <label><span class="chk_covet_l_true">Toothpaste</span><input type="checkbox" name="chk_covet" value="chk_covet_tooth_con"><span class="chk_covet_r_false">Condoms</span></label>
+            </li>
+            <li>
+              <label><span class="chk_covet_l_true">Alcohol</span><input type="checkbox" name="chk_covet" value="chk_covet_booze_choc"><span class="chk_covet_r_false">Chocolate</span></label>
+            </li>
+            <li>
+              <label><span class="chk_covet_l_true">Lighter</span><input type="checkbox" name="chk_covet" value="chk_covet_lghtr_trch"><span class="chk_covet_r_false">Torch</span></label>
+            </li>
+            <li>
+              <label><span class="chk_covet_l_true">Knife</span><input type="checkbox" name="chk_covet" value="chk_covet_knfe_tape"><span class="chk_covet_r_false">Duct tape</span></label>
+            </li>
+            <li>
+              <label><span class="chk_covet_l_true">Firearm</span><input type="checkbox" name="chk_covet" value="chk_covet_gun_car"><span class="chk_covet_r_false">Vehicle</span></label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <!--message in a time bottle section with text box-->
+      <div class="formBox">
+        <div class="question">
+          <label for="comments">If you could send a message back in time what survival tip would you give your pre-apocalypse self?</label>
+        </div>
+        <div class="answer textboxarea">
+          <textarea class="fw" rows="8" wrap="soft"></textarea>
+        </div>
+      </div>  
+        <div class="buttonsbox">
+        <!--reset button-->
+        <div class="resetButton">
+          <button type="reset" id="reset"><span class="crossthrough">Press Me</span></button>
+        </div>
+        <!--submit button-->
+        <div class="submitButton">
+          <button type="submit" id="submit">Press me</button>
+        </div>
+      </div>
+      <input type="hidden" id="timestamp" name="timestamp" value="2019">
+  </form>
   <!--END OF FORM-->
   <footer>
-    <p class="fw">This FreeCodeCamp <span class="fab fa-free-code-camp"></span> project designed by Mary Ronan is brought to you by <abbr title="HTML5"><span class="fab fa-html5"></span></abbr> and <abbr title="CSS3"><span class="fab fa-css3"></span></abbr></p>
+    <p>This FreeCodeCamp <span class="fab fa-free-code-camp"></span> project designed by Mary Ronan is brought to you by <abbr title="HTML5"><span class="fab fa-html5"></span></abbr> and <abbr title="CSS3"><span class="fab fa-css3"></span></abbr></p>
   </footer>
 </main>
    </body>

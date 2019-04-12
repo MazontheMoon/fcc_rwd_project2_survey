@@ -36,20 +36,15 @@ fieldset {
   margin: 0;
 }
 
-legend {
-  padding: 0;
-  margin: 0;
-}
-
 ul {
   list-style-type: none;
-  margin: 4px 0;
+  margin: 0;
   padding: 0;
 }
 
 li {
-  padding: 2px;
-  margin: 2px 0;
+  padding: 0;
+  margin: 0;
 }
 
 /*Layout - center the main container on screen - look like a chalkboard*/
@@ -62,34 +57,32 @@ body {
 }
 
 main {
-  margin: 20px 0;
+  padding: 20px 0;
   width: 75%;
-  max-width: 1000px;
+  max-width: 900px;
   background-color: var(--containerBG);
   border-radius: 20px;
   box-shadow: 2px 2px 2px black;
 }
 
-/*Define layout*/
-.form {
-  display: flex;
-  flex-flow: column nowrap;
-}
+/*Define 2 column layout for form*/
 
 .formBox {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0 auto;
 }
 
-.question, .answer {
-  flex: 1;
+.question {
+  grid-column: 1 / 2;
+  justify-self: right;
+  margin-left: 20px;
 }
 
-.formBoxInTime {
-  display: flex;
-}
-
-.timeFlex {
-  flex: 1;
+.answer {
+  grid-column: 2 / 3;
+  margin-right: 20px;
 }
 
 /*=============================
@@ -103,13 +96,15 @@ h1 {
   color: var(--fontChalk);
 }
 
+#description {
+  padding: 0 40px;
+}
 p,
 label,
 input,
 select,
 option,
 #dropdown,
-legend,
 li,
 button {
   font-family: "Indie Flower", Verdana, sans-serif;
@@ -124,6 +119,7 @@ p {
 abbr {
   padding-right: 3px;
 }
+
 option,
 input,
 #dropdown {
@@ -140,13 +136,12 @@ label {
 }
 
 #number {
-  width: 50%;
   text-align: center;
   font-weight: bold;
 }
 
 footer p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   color: white;
   text-shadow: 1px 1px 1px var(--fccGreen, green);
@@ -156,23 +151,20 @@ footer p {
 form elements
 =============*/
 
-.formContainer {
+.fw {
   width: 80%;
-  margin: 0 auto;
 }
 
 input,
 textarea,
 select {
   border-radius: 20px;
-  text-align: center;
+  padding: 0 5px;
 }
 
 input:hover,
-textarea:hover,
 select:hover,
 input:active,
-textarea:active,
 select:active {
   box-shadow: 1px 1px 1px red;
   cursor: pointer;
@@ -182,35 +174,42 @@ li label {
   cursor: pointer;
 }
 
-/*checkbox styling to look like slider switches*/
-.list_switch_buttons {
+/*checkbox reimagined to look like choosing between 2 options*/
+
+.switch li{
+  border: dashed 1px white;
+  padding: 0 5px;
+  margin: 5px 0;
 }
 
-.list_switch_buttons input {
+.switchButton {
+  display: flex;
+  position: relative;
+}
+
+.toggle {
   display: none;
 }
 
-.list_switch_buttons li {
-  border: solid 1px white;
-}
+.toggle::before {
 
-.switchLeft {
-}
-
-.switchRight {
-  text-align: right;
 }
 
 .chk_covet_l_true {
-  /*--sliderON*/
+  flex: 1;
 }
 
-.chk_covet_r_false {
-  /*--sliderOFF*/
+.chk_covet_r_false{
+  flex: 1;
+  text-align: right;
 }
 
+.toggle:checked {
+
+}
 /*3D button*/
 .buttonsbox {
+  grid-column: 1/-1;
   display: flex;
   justify-content: space-around;
 }
@@ -241,7 +240,7 @@ button:hover {
 
 button:active {
   top: 2px;
-  background: radial-gradient(hsl(6, 100%, 18%), hsl(6, 100%, 13%));
+  background: radial-gradient(hsl(6, 100%, 22%), hsl(6, 100%, 18%));
 }
 
 /*============

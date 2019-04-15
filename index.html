@@ -15,7 +15,8 @@
    </head>
    <body>
      <!--FreeCodeCamp Responsive Web Design project 2-->
-    <main class="container">
+    <!--FreeCodeCamp Responsive Web Design project 2-->
+<main class="container">
   <header>
     <h1 id="title">So you survived the Apocalypse!</h1>
     <p id="description">The world as we knew it is over and after <span class="crossthrough">10</span> 11 years you are one of the lucky few survivors still standing. The skills you have learned in order make it this far will help ensure the continuation of the human race
@@ -56,7 +57,7 @@
       </div>
       <!--survival time section-->
       <div class="question">
-        <label id="number-label" for="number">Years spent outside the Safe Zone?</label>
+        <label id="number-label" for="number">Years outside the Safe Zone?</label>
       </div>
       <div class="answer">
         <input type="number" min="0" max="12" name="number" id="number" class="fw" placeholder="1">
@@ -85,15 +86,15 @@
       </div>
       <!--survival choices section-->
       <div class="question">
-        <label>Which were most coveted?</label>
+        <label>The tough choices...</label>
       </div>
       <div class="answer">
         <fieldset>
           <ul class="switch fw">
-            <li>
-              <label class="switchButton"><span class="chk_covet_l_true">Toilet Paper</span>
-                <input type="checkbox" name="chk_covet" value="chk_covet_tp_socks" class="toggle" checked>
-                <span class="chk_covet_r_false">Spare Socks</span></label>
+            <li class="switchButton">
+              <label  for="chk_covet_tp_socks">Toilet Paper</label>
+                <input type="checkbox" name="chk_covet" id="chk_covet_tp_socks" value="chk_covet_tp_socks" class="toggle" checked>
+                <label for="chk_covet_tp_socks">Spare Socks</label>
             </li>
             <li>
               <label class="switchButton"><span class="chk_covet_l_true">Mattress</span><input type="checkbox" name="chk_covet" value="chk_covet_matt_deo"><span class="chk_covet_r_false">Deodorant</span></label>
@@ -121,7 +122,7 @@
         <label for="comments">If you could send a message back in time what survival tip would you give your pre-apocalypse self?</label>
       </div>
       <div class="answer">
-        <textarea class="fw" rows="8" wrap="soft"></textarea>
+        <textarea class="fw" rows="4" wrap="soft" placeholder="Peanutbutter...eat all the peanutbutter you can while you can! Oh, and learn how to skin a rabbit..."></textarea>
       </div>
       <!--buttons and that which shall not be seen-->
       <div class="buttonsbox">

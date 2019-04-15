@@ -104,6 +104,7 @@ label,
 input,
 select,
 option,
+textarea,
 #dropdown,
 li,
 button {
@@ -176,37 +177,55 @@ li label {
 
 /*checkbox reimagined to look like choosing between 2 options*/
 
-.switch li{
-  border: dashed 1px white;
-  padding: 0 5px;
-  margin: 5px 0;
-}
-
 .switchButton {
   display: flex;
   position: relative;
+  border: dashed 1px white;
+  padding: 0 5px;
+  margin: 5px 0;
 }
 
 .toggle {
   display: none;
 }
 
-.toggle::before {
-
-}
-
-.chk_covet_l_true {
+.switchButton label {
   flex: 1;
+  padding: 0 5px;
+  margin: 0 5px;
+  text-align: center;
 }
 
-.chk_covet_r_false{
-  flex: 1;
-  text-align: right;
+
+.switchButton::before {
+  position: absolute;
+  display: block;
+  content:"";
+  height: 0;
+  width: 0;
+  border: solid 8px transparent;
+  border-top: solid 8px red;
+  top: 0;
+  left: 75%;
 }
 
-.toggle:checked {
-
+.switchButton::after {
+  position: absolute;
+  display: block;
+  content:"";
+  height: 0;
+  width: 95%;
+  border: solid 2px transparent;
+  border-top: solid 3px red;
+  top: 0;
+  left: 2%;
 }
+/*
+.switchButton::before .toggle:checked {
+  left: 75%;
+}
+*/
+
 /*3D button*/
 .buttonsbox {
   grid-column: 1/-1;
@@ -219,6 +238,7 @@ button {
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: bold;
+  text-shadow: 0 1px 0 black;
   width: 125px;
   height: 125px;
   border-radius: 100%;

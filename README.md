@@ -15,3 +15,9 @@ Step4: Kick self for not sticking with the plan in step 2
 Step5: Complete new design and lovin it
 Step6: Polishing touches
 Step7: Work In Progress
+
+
+15/04/2019
+fixed duo labels on checkbox switch section.
+Added placeholder to textarea and fixed font issue
+Added the default <em>unchecked</em>em> style to checkbox section

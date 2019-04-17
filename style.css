@@ -19,7 +19,7 @@ Basic Styles and Layout
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   scroll-behavior: smooth;
 }
 
@@ -57,6 +57,7 @@ body {
 }
 
 main {
+  margin: 5px;
   padding: 20px 0;
   width: 75%;
   max-width: 900px;
@@ -129,7 +130,6 @@ input,
 
 .crossthrough {
   text-decoration: line-through;
-  font-size: 1.4rem;
 }
 
 label {
@@ -183,6 +183,7 @@ li label {
   border: dashed 1px white;
   padding: 0 5px;
   margin: 5px 0;
+  transition: all 0.2s ease;
 }
 
 .toggle {
@@ -191,11 +192,10 @@ li label {
 
 .switchButton label {
   flex: 1;
-  padding: 0 5px;
+  padding: 3px 5px;
   margin: 0 5px;
   text-align: center;
 }
-
 
 .switchButton::before {
   position: absolute;
@@ -205,7 +205,7 @@ li label {
   width: 0;
   border: solid 8px transparent;
   border-top: solid 8px red;
-  top: 0;
+  top: 2px;
   left: 75%;
 }
 
@@ -217,14 +217,15 @@ li label {
   width: 95%;
   border: solid 2px transparent;
   border-top: solid 3px red;
-  top: 0;
+  top: 2px;
   left: 2%;
 }
-/*
-.switchButton::before .toggle:checked {
+
+
+.toggle:checked + .switchButton::after {
   left: 75%;
 }
-*/
+
 
 /*3D button*/
 .buttonsbox {
@@ -238,20 +239,24 @@ button {
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: bold;
-  text-shadow: 0 1px 0 black;
+  text-shadow: 0 -1px 0 black;
   width: 125px;
   height: 125px;
   border-radius: 100%;
-  border: solid 1px hsl(6, 100%, 30%);
+  border: solid 1px black;
   background-color: var(--bigButton);
   background: radial-gradient(hsl(6, 100%, 25%), hsl(6, 100%, 20%));
   background: -webkit-radial-gradient(hsl(6, 100%, 25%), hsl(6, 100%, 20%));
   outline: none;
   z-index: 4;
-  box-shadow: inset 0 1px 0 hsl(6, 100%, 25%), 0 2px 0 hsl(6, 100%, 24%),
-    0 3px 0 hsl(6, 100%, 23%), 0 4px 0 hsl(6, 100%, 22%),
-    0 5px 0 hsl(6, 100%, 21%), 0 6px 0 hsl(6, 100%, 20%),
-    0 7px 0 hsl(6, 100%, 19%), 0 9px 0 hsl(6, 100%, 18%);
+  box-shadow: inset 0 1px 0 hsl(6, 100%, 25%), 
+    0 2px 0 hsl(6, 100%, 22%),
+    0 3px 0 hsl(6, 100%, 18%), 
+    0 4px 0 hsl(6, 100%, 16%),
+    0 5px 0 hsl(6, 100%, 12%), 
+    0 6px 0 hsl(6, 100%, 10%),
+    0 7px 0 hsl(6, 100%, 8%), 
+    0 9px 0 hsl(6, 100%, 6%);
 }
 
 button:hover {
@@ -260,8 +265,19 @@ button:hover {
 
 button:active {
   top: 2px;
-  background: radial-gradient(hsl(6, 100%, 22%), hsl(6, 100%, 18%));
+  background: radial-gradient(hsl(6, 100%, 18%), hsl(6, 100%, 16%));
+  box-shadow: inset 0 1px 0 hsl(6, 100%, 25%), 
+    0 2px 0 hsl(6, 100%, 22%),
+    0 3px 0 hsl(6, 100%, 18%), 
+    0 4px 0 hsl(6, 100%, 16%),
+    0 5px 0 hsl(6, 100%, 12%), 
+    0 6px 0 hsl(6, 100%, 10%);
 }
+
+/*=====
+Footer
+======*/
+
 
 /*============
 MEDIA QUERIES

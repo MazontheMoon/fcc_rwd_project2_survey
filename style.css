@@ -7,8 +7,6 @@ Declare variables for page
   --containerBG: #000;
   --fontChalk: #fff;
   --bigButton: #840f00;
-  --sliderON: #ff2900;
-  --sliderOFF: #ff8d00;
 }
 
 /*=====================
@@ -58,12 +56,12 @@ body {
 
 main {
   margin: 5px;
-  padding: 20px 0;
+  padding-top: 20px;
   width: 75%;
   max-width: 900px;
   background-color: var(--containerBG);
   border-radius: 20px;
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 5px black;
 }
 
 /*Define 2 column layout for form*/
@@ -100,6 +98,7 @@ h1 {
 #description {
   padding: 0 40px;
 }
+
 p,
 label,
 input,
@@ -124,7 +123,8 @@ abbr {
 
 option,
 input,
-#dropdown {
+#dropdown,
+textarea {
   color: var(--containerBG);
 }
 
@@ -141,6 +141,10 @@ label {
   font-weight: bold;
 }
 
+footer {
+  padding: 0;
+  margin: 10px;
+}
 footer p {
   font-size: 1rem;
   text-align: center;
@@ -161,6 +165,7 @@ textarea,
 select {
   border-radius: 20px;
   padding: 0 5px;
+  outline: none;
 }
 
 input:hover,
@@ -197,22 +202,34 @@ li label {
   text-align: center;
 }
 
-.switchButton::before {
+.switch {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.switchR {
+  flex: 1;
+}
+
+.switchL {
+  flex: 1;
+}
+.switchR::before {
   position: absolute;
   display: block;
-  content:"";
+  content: "";
   height: 0;
   width: 0;
   border: solid 8px transparent;
   border-top: solid 8px red;
   top: 2px;
-  left: 75%;
+  left: calc(75% - 16px);
 }
 
-.switchButton::after {
+.switchR::after {
   position: absolute;
   display: block;
-  content:"";
+  content: "";
   height: 0;
   width: 95%;
   border: solid 2px transparent;
@@ -221,17 +238,21 @@ li label {
   left: 2%;
 }
 
-
-.toggle:checked + .switchButton::after {
-  left: 75%;
+.toggle:checked + .switchR::before {
+  left: 25%;
 }
-
+/*
+.toggle:checked + .switchButton::after {
+  left: calc (25% - 16px);
+}
+*/
 
 /*3D button*/
 .buttonsbox {
   grid-column: 1/-1;
   display: flex;
   justify-content: space-around;
+  margin: 10px;
 }
 
 button {
@@ -249,14 +270,10 @@ button {
   background: -webkit-radial-gradient(hsl(6, 100%, 25%), hsl(6, 100%, 20%));
   outline: none;
   z-index: 4;
-  box-shadow: inset 0 1px 0 hsl(6, 100%, 25%), 
-    0 2px 0 hsl(6, 100%, 22%),
-    0 3px 0 hsl(6, 100%, 18%), 
-    0 4px 0 hsl(6, 100%, 16%),
-    0 5px 0 hsl(6, 100%, 12%), 
-    0 6px 0 hsl(6, 100%, 10%),
-    0 7px 0 hsl(6, 100%, 8%), 
-    0 9px 0 hsl(6, 100%, 6%);
+  box-shadow: inset 0 1px 0 hsl(6, 100%, 25%), 0 2px 0 hsl(6, 100%, 22%),
+    0 3px 0 hsl(6, 100%, 18%), 0 4px 0 hsl(6, 100%, 16%),
+    0 5px 0 hsl(6, 100%, 12%), 0 6px 0 hsl(6, 100%, 10%),
+    0 7px 0 hsl(6, 100%, 8%), 0 9px 0 hsl(6, 100%, 6%);
 }
 
 button:hover {
@@ -266,18 +283,14 @@ button:hover {
 button:active {
   top: 2px;
   background: radial-gradient(hsl(6, 100%, 18%), hsl(6, 100%, 16%));
-  box-shadow: inset 0 1px 0 hsl(6, 100%, 25%), 
-    0 2px 0 hsl(6, 100%, 22%),
-    0 3px 0 hsl(6, 100%, 18%), 
-    0 4px 0 hsl(6, 100%, 16%),
-    0 5px 0 hsl(6, 100%, 12%), 
-    0 6px 0 hsl(6, 100%, 10%);
+  box-shadow: inset 0 1px 0 hsl(6, 100%, 25%), 0 2px 0 hsl(6, 100%, 22%),
+    0 3px 0 hsl(6, 100%, 18%), 0 4px 0 hsl(6, 100%, 16%),
+    0 5px 0 hsl(6, 100%, 12%), 0 6px 0 hsl(6, 100%, 10%);
 }
 
 /*=====
 Footer
 ======*/
-
 
 /*============
 MEDIA QUERIES

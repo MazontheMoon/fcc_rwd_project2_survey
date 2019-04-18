@@ -14,5 +14,5 @@ Step3: Get distracted and end up designing completely new layout
 Step4: Kick self for not sticking with the plan in step 2
 Step5: Complete new design and lovin it
 Step6: Polishing touches
-Step7: Work In Progress
+Step7: Media queries for responsivesness
 

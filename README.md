@@ -16,3 +16,5 @@ Step5: Complete new design and lovin it
 Step6: Polishing touches
 Step7: Media queries for responsivesness
 
+Current stage - end of step 6
+

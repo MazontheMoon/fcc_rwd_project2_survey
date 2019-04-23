@@ -2,11 +2,11 @@
 Declare variables for page
 =========================*/
 :root {
-  --fccGreen: #006400;
-  --pageBG: #d32f2f;
-  --containerBG: #000;
-  --fontChalk: #fff;
-  --bigButton: #840f00;
+  --pageBG: #d32f2f;  /*bright red*/
+  --containerBG: #000;  /*chalkboard black*/
+  --fontChalk: #fff;  /*white chalk*/
+  --bigButton: #840f00;  /*dark red*/
+  --fccGreen: #006400;  /*FCC green*/
 }
 
 /*=====================
@@ -152,6 +152,11 @@ footer p {
   text-shadow: 1px 1px 1px var(--fccGreen, green);
 }
 
+/*auto capitalise first letter as most people don't seem to bother capitalising their name anymore for some reason*/
+input[name="name"] {
+  text-transform: capitalize;
+}
+
 /*===========
 form elements
 =============*/
@@ -188,7 +193,6 @@ li label {
   border: dashed 1px white;
   padding: 0 5px;
   margin: 5px 0;
-  transition: all 0.2s ease;
 }
 
 .toggle {
@@ -241,13 +245,9 @@ li label {
 .toggle:checked + .switchR::before {
   left: 25%;
 }
-/*
-.toggle:checked + .switchButton::after {
-  left: calc (25% - 16px);
-}
-*/
 
-/*3D button*/
+
+/*Big red 3D button*/
 .buttonsbox {
   grid-column: 1/-1;
   display: flex;
@@ -296,9 +296,13 @@ Footer
 MEDIA QUERIES
 =============*/
 @media screen and (max-width: 768px) {
+  
+  
   /*larger font size*/
 
   #description {
     text-align: justify;
   }
+  
+  
 }

@@ -86,6 +86,7 @@ main {
 Fonts and text and wordeffects, oh my!
 ====================================*/
 h1 {
+  margin: 0 auto;
   font-family: "Rock Salt", Verdana, sans-serif;
   font-size: 2rem;
   text-align: center;
@@ -205,11 +206,7 @@ li label {
   flex-flow: row nowrap;
 }
 
-.switchR {
-  flex: 1;
-}
-
-.switchL {
+.switchR, .switchL {
   flex: 1;
 }
 
@@ -300,21 +297,21 @@ MEDIA QUERIES
   /*less background image on sides*/
   main {
     width: 90%;
+    padding-right: 20px;
   }
   
+  .fw {
+    width: 100%;
+  }
   /*larger font size*/
 
-  #description {
+  #description, .sml-view {
     text-align: justify;
+    padding-right: 20px;
   }
   
   /*change to a single column layout*/
-  
-  .formBox {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
- 
+
   .question {
     grid-column: 1/-1;
     justify-self: left;
@@ -325,6 +322,7 @@ MEDIA QUERIES
     grid-column: 1/-1;
     padding-left: 50px;
   }
+  
   
   .center {
     margin: 0 auto;

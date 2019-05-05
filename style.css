@@ -2,11 +2,11 @@
 Declare variables for page
 =========================*/
 :root {
-  --pageBG: #d32f2f;  /*bright red*/
-  --containerBG: #000;  /*chalkboard black*/
-  --fontChalk: #fff;  /*white chalk*/
-  --bigButton: #840f00;  /*dark red*/
-  --fccGreen: #006400;  /*FCC green*/
+  --pageBG: #d32f2f; /*bright red*/
+  --containerBG: #000; /*chalkboard black*/
+  --fontChalk: #fff; /*white chalk*/
+  --bigButton: #840f00; /*dark red*/
+  --fccGreen: #006400; /*FCC green*/
 }
 
 /*=====================
@@ -207,7 +207,8 @@ li label {
   flex-flow: row nowrap;
 }
 
-.switchR, .switchL {
+.switchR,
+.switchL {
   flex: 1;
 }
 
@@ -238,7 +239,6 @@ li label {
 .toggle:checked + .switchR::before {
   left: 25%;
 }
-
 
 /*Big red 3D button*/
 .buttonsbox {
@@ -285,8 +285,8 @@ button:active {
 Footer
 ======*/
 
-footer p{
-  padding: 0;
+footer p {
+  padding: 10px 0;;
   margin-top: 20px;
 }
 
@@ -294,23 +294,23 @@ footer p{
 MEDIA QUERIES
 =============*/
 @media screen and (max-width: 768px) {
-  
   /*less background image on sides*/
   main {
     width: 90%;
     padding-right: 20px;
   }
-  
+
   .fw {
     width: 100%;
   }
   /*larger font size*/
 
-  #description, .sml-view {
+  #description,
+  .sml-view {
     text-align: justify;
     padding-right: 20px;
   }
-  
+
   /*change to a single column layout*/
 
   .question {
@@ -318,25 +318,27 @@ MEDIA QUERIES
     justify-self: left;
     padding-left: 20px;
   }
-  
+
   .answer {
     grid-column: 1/-1;
     padding-left: 50px;
   }
-  
+
   .buttonsbox {
     grid-column: 1/-1;
     padding-left: 20px;
   }
+
   .center {
     margin: 0 auto;
   }
- 
-  
-  .switchButton{
+
+  /*remove unneeded elements and padding*/
+
+  .switchButton {
     padding: 0;
   }
-  
+
   label abbr {
     display: none;
   }

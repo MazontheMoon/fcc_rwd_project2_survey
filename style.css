@@ -273,6 +273,9 @@ button:hover {
   background: radial-gradient(hsl(6, 100%, 22%), hsl(6, 100%, 18%));
 }
 
+button[type="reset"]:hover span:after {
+  content:' to reset';
+}
 button:active {
   top: 2px;
   background: radial-gradient(hsl(6, 100%, 18%), hsl(6, 100%, 16%));
